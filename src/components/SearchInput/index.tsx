@@ -18,7 +18,6 @@ const SearchInput: React.FC<InputProps> = ({ value = '', ...rest }) => {
 
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
-
     setIsFilled(!!value);
   }, [value]);
 
@@ -29,7 +28,6 @@ const SearchInput: React.FC<InputProps> = ({ value = '', ...rest }) => {
         size={20}
         color={isFocused || isFilled ? '#C72828' : '#B7B7CC'}
       />
-
       <TextInput
         placeholderTextColor="#B7B7CC"
         onFocus={handleInputFocus}
@@ -41,5 +39,4 @@ const SearchInput: React.FC<InputProps> = ({ value = '', ...rest }) => {
     </Container>
   );
 };
-
 export default SearchInput;
